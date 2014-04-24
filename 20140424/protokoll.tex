@@ -1,0 +1,163 @@
+%%% PREAMBLE %%%
+
+% Strict mode
+
+\RequirePackage[l2tabu, orthodox]{nag} % Warn when using deprecated constructs
+
+% Document class and packages
+
+\documentclass[10pt,a4paper,parskip,fleqn]{scrartcl}
+\usepackage[a4paper,vmargin={30mm},hmargin={30mm}]{geometry} % Page margins
+\usepackage[ngerman]{babel} % New German hyphenation (multilingual support)
+\usepackage[utf8x]{inputenc} % Unicode support
+\usepackage{graphicx} % Graphics support
+\usepackage{enumitem}
+
+% Font configuration
+
+\usepackage[sc]{mathpazo} % Use palatino font
+\usepackage[T1]{fontenc} % Use correct font encoding
+\usepackage[babel=true]{microtype} % Micro-typographic optimizations
+\addtokomafont{disposition}{\rmfamily} % Set palatino as heading font
+
+% Easier enumerations
+
+\newcommand{\ol}{\begin{enumerate}[itemsep=-0.3em,topsep=-0.3em]}
+\newcommand{\lo}{\end{enumerate}}
+\newcommand{\ul}{\begin{itemize}[itemsep=-0.3em,topsep=-0.3em]}
+\newcommand{\lu}{\end{itemize}}
+\newcommand{\li}{\item}
+
+
+%%% TITLEPAGE %%%
+
+\title{Protokoll Vorstandssitzung}
+\subject{coredump rapperswil}
+\date{24. April 2014}
+
+
+%%% HEADER / FOOTER %%%
+
+\usepackage{fancyhdr} % Fancy headers
+\usepackage{lastpage} % Page numbering
+
+% Capture title and author
+\makeatletter
+\let\Date\@date
+\makeatother
+
+% Fancy headers configuration
+\pagestyle{fancy}
+\fancyhead{} % Clear all header fields
+\fancyhead[LO,LE]{\bfseries Protokoll}
+\fancyhead[RO,RE]{\bfseries \Date{}}
+\fancyfoot{} % Clear all footer fields
+\fancyfoot[CO,CE]{Seite \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Better footer
+\cfoot{Seite \thepage\ von \pageref{LastPage}}
+
+
+%%% MAIN DOCUMENT %%%
+
+\begin{document}
+
+\begin{titlepage}
+
+	\maketitle
+	\thispagestyle{empty} % Don't start page numbers on this page
+
+	\vfill
+
+	\begin{description}
+		\item[Beginn] 24. April 2014, 21:00 Uhr
+		\item[Ende] 24. April 2014, 22:00 Uhr
+		\item[Ort] Vereinslokal
+		\item[Protokoll] Raphael Nestler
+		\item[Anwesend] Danilo Bargen, Josua Schmid, Raphael Nestler
+	\end{description}
+
+\end{titlepage}
+
+
+\section{Coole Projektideen}
+
+\subsection{Salami!!! Und sonstige Würste}
+
+Sensirion sponsert Eval-Kit und Sensoren!
+
+\subsection{3D-Drucker}
+
+Gut für andere Projekte. Jemand müsste mal eine Kostenaufstellung für
+einen RepRap machen.
+
+\subsection{Kernspeicher}
+
+Da sich unser Name vom Kernspeicher ableitet, wärs u kuul wenn wir einen hätten :)
+
+
+\section{Marketing}
+
+\subsection{HSR}
+
+Nadeldrucker war voller Erfolg (over 9000!)
+
+\subsection{Nerd-Night im Bären}
+
+On Hold
+
+\subsection{Ferienpass Rappi-Jona}
+
+Eletronik-Nachmittag für Schüler. Ideen:
+
+\ul
+	\li LED Streifen mit Potis:
+	\ul
+		\li 9V Batterie RGB-LED und 3 Potis
+		\li Lötkolben organisieren?
+		\li PCB's?
+	\lu
+	\li Programmieren lernen.
+	\ul
+		\li Minecraft RaspberryPi: Mittels python auf einem
+		RaspberryPi ein MineCraft clone fernsteuern
+		\texttt{http://youtu.be/icrbqilD4Ng}
+	\lu
+\lu
+
+Ferienpass Komitee meinte wir sollen einen Vorschlag einreichen.
+
+Danilo: Mail an Ferienpasskomitee 
+
+Josua: Organisiert Sponsoring: HSR, PiShop, Pi-Foundation, SRF
+
+Raphi: Zeichnet Schema und organisiert PCB (\texttt{http://www.kicad-pcb.org/display/KICAD/KiCad+EDA+Software+Suite})
+
+
+
+\subsection{Berufsschulen, Kantis}
+
+Mögliche Zusammenarbeit? Josua fragt an.
+
+Keine Antwort bekommen...
+
+\section{Networking}
+
+\subsection{Andere ''Coredumps`` aka Hackerspaces besuchen}
+
+zB Ruum42 in St. Gallen oder CCC-ZH.
+
+CCC-ZH wäre mal interessant
+
+\section{Diverses}
+
+Coole Demo: \texttt{http://youtu.be/lwFVlNytq0Q}
+
+
+\vspace{1cm}
+
+Ende der Sitzung: 22:00 Uhr
+
+\end{document}
