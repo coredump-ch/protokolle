@@ -1,0 +1,171 @@
+%%% PREAMBLE %%%
+
+% Strict mode
+
+\RequirePackage[l2tabu, orthodox]{nag} % Warn when using deprecated constructs
+
+% Document class and packages
+
+\documentclass[10pt,a4paper,parskip,fleqn]{scrartcl}
+\usepackage[a4paper,vmargin={30mm},hmargin={30mm}]{geometry} % Page margins
+\usepackage[ngerman]{babel} % New German hyphenation (multilingual support)
+\usepackage[utf8x]{inputenc} % Unicode support
+\usepackage{graphicx} % Graphics support
+\usepackage{enumitem}
+
+% Font configuration
+
+\usepackage[sc]{mathpazo} % Use palatino font
+\usepackage[T1]{fontenc} % Use correct font encoding
+\usepackage[babel=true]{microtype} % Micro-typographic optimizations
+\addtokomafont{disposition}{\rmfamily} % Set palatino as heading font
+
+% Easier enumerations
+
+\newcommand{\ol}{\begin{enumerate}[itemsep=-0.3em,topsep=-0.3em]}
+\newcommand{\lo}{\end{enumerate}}
+\newcommand{\ul}{\begin{itemize}[itemsep=-0.3em,topsep=-0.3em]}
+\newcommand{\lu}{\end{itemize}}
+\newcommand{\li}{\item}
+
+
+%%% TITLEPAGE %%%
+
+\title{Protokoll Gründungsversammlung}
+\subject{coredump rapperswil}
+\date{Protokoll vom 26. August 2013}
+
+
+%%% HEADER / FOOTER %%%
+
+\usepackage{fancyhdr} % Fancy headers
+\usepackage{lastpage} % Page numbering
+
+% Capture title and author
+\makeatletter
+\let\Date\@date
+\makeatother
+
+% Fancy headers configuration
+\pagestyle{fancy}
+\fancyhead{} % Clear all header fields
+\fancyhead[LO,LE]{\bfseries Protokoll}
+\fancyhead[RO,RE]{\bfseries \Date{}}
+\fancyfoot{} % Clear all footer fields
+\fancyfoot[CO,CE]{Seite \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Better footer
+\cfoot{Seite \thepage\ von \pageref{LastPage}}
+
+
+%%% MAIN DOCUMENT %%%
+
+\begin{document}
+
+\begin{titlepage}
+
+	\maketitle
+	\thispagestyle{empty} % Don't start page numbers on this page
+
+	\vfill
+
+	\begin{description}
+		\item[Beginn] 26. August 2013, 16:30 Uhr
+		\item[Ende] 26. August 2013, 18:00 Uhr
+		\item[Ort] Rapperswil, Seeufer
+		\item[Protokoll] Danilo Bargen
+		\item[Anwesend] Danilo Bargen, Josua Schmid, Raphael Nestler, Christian
+			Fässler, Lukas Hofmaier
+	\end{description}
+
+\end{titlepage}
+
+
+\section{Begrüssung, Vereinsziele}
+
+\ul
+	\li Begrüssung, Austausch der Vorstellungen und Ideen was der Hackerspace den
+	Mitgliedern bieten soll.
+	\li Bedürfnisse können grob in drei Kategorien aufgeteilt werden: a)
+	Infrastruktur, b) Austausch von Wissen und KnowHow und c) Arbeit an
+	gemeinsamen Projekten
+	\li Infos zu aktueller Raumsituation
+\lu
+
+
+\section{Vereinsname}
+
+\ul
+	\li Alle anwesenden sind mit dem Namen ''coredump'' zufrieden.
+	\li Vereinsname sollte immer klein geschrieben werden.
+\lu
+
+
+\section{Überarbeiten Statuten}
+
+\ul
+	\li Der Vorschlag zu den Vereinsstatuten wird gemeinsam überarbeitet. Resultat
+	ist auf der Website zu finden.
+\lu
+
+
+\section{Mitgliederbeiträge}
+
+\ul
+	\li Bis Ende Jahr beteiligt sich jedes der Gründungsmitglieder mit 80 CHF pro
+	Monat an den Initialkosten. Das Geld wird in den nächsten Tagen auf das
+	Vereinskonto überwiesen.
+	\li Nach langer Diskussion wird der Mitgliederbeitrag auf 10 CHF / Monat für
+	Nichtverdiener und auf 20 CHF / Monat für Verdiener gesetzt.
+\lu
+
+
+\section{Wahl des Vorstandes}
+
+\ul
+	\li Josua Schmid schlägt Danilo Bargen als Präsidenten vor.
+	\li Danilo Bargen schlägt Josua Schmid als Kassier vor.
+	\li Danilo Bargen stellt sich zusätzlich als Aktuar zur Verfügung.
+	\li Raphael Nestler stellt sich für die Koordination zur Verfügung.
+	\li Obige Vorschläge werden einstimmig angenommen. Somit setzt sich der
+	Vorstand aus folgenden Personen zusammen:
+		\ul
+			\li Präsident, Aktuar: Danilo Bargen
+			\li Kassier: Josua Schmid
+			\li Koordination: Raphael Nestler
+		\lu
+\lu
+
+
+\section{Nächste Schritte}
+
+\ul
+	\li Josua und Danilo eröffnen so bald wie möglich bei der Bank Linth ein
+	Vereinskonto
+	\li Warten auf erfolgreichen Mietvertrag, einreichen fehlender Unterlagen
+	\li Domainvertrag muss fertiggestellt und unterschrieben werden
+	\li Wir fragen Hostpoint an wegen vServer / Server Sponsoring
+	\li Suchen weiterer Sponsoren
+	\li Suchen weiterer Mitglieder
+\lu
+
+\vspace{1cm}
+
+Ende der Gründungsversammlung: 18:00 Uhr
+
+\vspace{2cm}
+
+\begin{minipage}[t]{0.49\textwidth}
+			\center
+			\rule{5cm}{0.2mm}\\
+			Danilo Bargen, Präsident
+		\end{minipage}
+		\begin{minipage}[t]{0.49\textwidth}
+			\center
+			\rule{5cm}{0.2mm}\\
+			Josua Schmid, Kassier
+		\end{minipage}
+
+\end{document}
