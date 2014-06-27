@@ -1,0 +1,171 @@
+%%% PREAMBLE %%%
+
+% Strict mode
+
+\RequirePackage[l2tabu, orthodox]{nag} % Warn when using deprecated constructs
+
+% Document class and packages
+
+\documentclass[10pt,a4paper,parskip,fleqn]{scrartcl}
+\usepackage[a4paper,vmargin={30mm},hmargin={30mm}]{geometry} % Page margins
+\usepackage[ngerman]{babel} % New German hyphenation (multilingual support)
+\usepackage[utf8x]{inputenc} % Unicode support
+\usepackage{graphicx} % Graphics support
+\usepackage{enumitem}
+
+% Font configuration
+
+\usepackage[sc]{mathpazo} % Use palatino font
+\usepackage[T1]{fontenc} % Use correct font encoding
+\usepackage[babel=true]{microtype} % Micro-typographic optimizations
+\addtokomafont{disposition}{\rmfamily} % Set palatino as heading font
+
+% Easier enumerations
+
+\newcommand{\ol}{\begin{enumerate}[itemsep=-0.3em,topsep=-0.3em]}
+\newcommand{\lo}{\end{enumerate}}
+\newcommand{\ul}{\begin{itemize}[itemsep=-0.3em,topsep=-0.3em]}
+\newcommand{\lu}{\end{itemize}}
+\newcommand{\li}{\item}
+
+
+%%% TITLEPAGE %%%
+
+\title{Protokoll Vorstandssitzung}
+\subject{coredump rapperswil}
+\date{23. Juni 2014}
+
+
+%%% HEADER / FOOTER %%%
+
+\usepackage{fancyhdr} % Fancy headers
+\usepackage{lastpage} % Page numbering
+
+% Capture title and author
+\makeatletter
+\let\Date\@date
+\makeatother
+
+% Fancy headers configuration
+\pagestyle{fancy}
+\fancyhead{} % Clear all header fields
+\fancyhead[LO,LE]{\bfseries Protokoll}
+\fancyhead[RO,RE]{\bfseries \Date{}}
+\fancyfoot{} % Clear all footer fields
+\fancyfoot[CO,CE]{Seite \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Better footer
+\cfoot{Seite \thepage\ von \pageref{LastPage}}
+
+
+%%% MAIN DOCUMENT %%%
+
+\begin{document}
+
+\begin{titlepage}
+
+	\maketitle
+	\thispagestyle{empty} % Don't start page numbers on this page
+
+	\vfill
+
+	\begin{description}
+		\item[Beginn] 23. Juni 2014, 21:00 Uhr
+		\item[Ende] 23. Juni 2014, 22:00 Uhr
+		\item[Ort] Vereinslokal
+		\item[Protokoll] Raphael Nestler
+		\item[Anwesend] Danilo Bargen, Josua Schmid, Raphael Nestler
+	\end{description}
+
+\end{titlepage}
+
+\section{Stand Projekte}
+
+
+\section{Coole Projektideen}
+
+\subsection{Wassertemperatursensor}
+
+Wassertemperatur im Obersee messen und zur Verfügung stellen.
+
+Kommunikation?
+\ul
+\li	SMS
+\lu
+
+Energie?
+\ul
+\li	Wellenbewegung
+\li Wind
+\li Solar
+\li Temperaturdifferenz
+\lu
+
+\subsection{Drink-Mix-Roboter}
+
+\texttt{http://bit.ly/1opd1Bf}
+
+
+\subsection{Codegolf}
+
+
+\section{Mitgliedschaft CCC}
+
+5.- pro Mitglied pro Jahr. Wäre zahlbar.
+
+\textbf{Mail an alle Mitglieder.}
+
+\section{Flip-Dot Display}
+
+Tauschgeschäft mit CCC. Wir bieten Bier, wir können das Display ausleihen.
+
+
+\section{Mitgliederbeiträge}
+
+Einige hier ungenannte Mitglieder müssen noch ihren Mitgliederbeitrag
+überweisen.
+
+
+\section{Marketing}
+
+
+\subsection{Ferienpass Rappi-Jona}
+
+\ul
+\li	Programmieren: 14.10. und 17.10.
+\li Löten:	13.10. und 16.10.
+\lu
+
+Material: 10 Lötsets, 8 RaspberryPi
+
+Zusammenfassungstext: Gemeinsam, siehe github
+
+E-Mail an Mitglieder: Danilo
+
+Antwort an Ferienpass: Danilo
+
+\subsection{Berufsschulen, Kantis}
+
+Raphi fragt in Berufsschule Uster via Flurin nach.
+
+Möglichkeiten:
+\ul
+\li Vortrag mit Demonstration
+\lu
+
+
+\section{Networking}
+
+\subsection{Andere ''Coredumps`` aka Hackerspaces besuchen}
+
+zB Ruum42 in St. Gallen oder CCC-ZH.
+
+CCC-ZH wäre mal interessant
+
+\vspace{1cm}
+
+Ende der Sitzung: 22:26 Uhr
+
+\end{document}
